@@ -3,13 +3,27 @@
 import sys
 
 def shrink(string):
-    print(string[8:])
+    print(string[0:8])
 
 def enlarge(string):
-    return 'f'
+    final_result = ''
+    index = len(string)
+
+    for element in string:
+        final_result += element
+    while index <= 8:
+        final_result += 'Z'
+        index += 1
+
+    return final_result
 
 if len(sys.argv) < 2:
     print('none')
 else:
-    if (len(string) > 7):
-        shrink(sys.)
+    for element in sys.argv[1:]:
+        if len(element) > 8:
+            shrink(element)
+        elif len(element) == 8:
+            print(element)
+        else:
+            print(enlarge(element))
