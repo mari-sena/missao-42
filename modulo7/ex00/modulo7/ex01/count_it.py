@@ -7,11 +7,8 @@ arg_qty = len(sys.argv)
 if arg_qty < 2:
     print('none')
 else:
-    index = 0
-    while index < arg_qty:
+    for index, element in enumerate(sys.argv):
         if index == 0:
             print(f'parameters: {len(sys.argv[1:])}')
         else:
-            print(f'{sys.argv[index]}: {len(sys.argv[index])}')
-        index += 1
-    
+            print(f'{element}: {len(element)}')
