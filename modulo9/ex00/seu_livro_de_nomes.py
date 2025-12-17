@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 
 def array_de_nomes(pessoas):
+    result = []
     for pessoa in pessoas:
-        print(f'{pessoa.capitalize()}: {pessoas[pessoa].capitalize()}')
+        aux = str(pessoa.capitalize()) + ': ' + str(pessoas[pessoa].capitalize())
+        result.append(aux)
+    return result
+    
 
 pessoas = {
 "jean": "valjean",
@@ -11,4 +15,4 @@ pessoas = {
 "fifi": "brindacier"
 }
 
-array_de_nomes(pessoas)
+print(array_de_nomes(pessoas))
